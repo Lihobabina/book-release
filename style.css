@@ -6,17 +6,14 @@ html{
 }
 body{
     font-family: 'Lora', serif;
+    overflow-x: hidden;
 }
 header{
     width: 100%;
-    height: 100vh;
-    padding: 0 45px 0 45px;
-    background: url(./images/home-photo.jpg);
-    background-color: #eaeaea;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 20px;
+    height: 100%;
+    padding: 0 45px 0px 45px;
     position: relative;
+    background-color: #eaeaea;
 }
 header .row{
     width: 100%;
@@ -25,15 +22,28 @@ header .row{
     justify-content: space-between;
     align-items: center;
 }
-
+.header-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-img{
+    width: 50%;
+    align-self: flex-end;
+}
+.header-img img{
+    width: 100%;
+    height: 100%;
+}
 .menu{
-    width: 35%;
+    column-gap: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .menu-item{
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 20px;
     color: #2C2C2C;
     transition: 0.5s;
@@ -42,7 +52,7 @@ header .row{
     color: #f8b045;
 }
 .social{
-    width: 10%;
+    column-gap: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,17 +70,15 @@ header .row{
     color: #f8b045;
 }
 .heading{
-    width: 33%;
+    width: 44%;
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    margin-top: 100px;
-    margin-left: 20px;
 }
 .heading h1{
     width: 100%;
-    font-size: 55px;
+    font-size: 3rem;
     color: #2C2C2C;
     letter-spacing: 2px;
     margin-bottom: 25px;
@@ -79,7 +87,7 @@ header .row{
     color: #565656;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 25px;
 }
@@ -92,7 +100,7 @@ padding-top: 50px;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding: 0 100px 90px 100px;
+    padding: 0 45px 50px 45px;
 }
 .preview h1{
     font-size: 60px;
@@ -157,7 +165,7 @@ padding-top: 50px;
     background-color: #f8b045;
     color: #000;
 }
-.buy-btn::after{
+.buy-icons::after{
     content: '';
     display: block;
     width: 216px;
@@ -166,22 +174,23 @@ padding-top: 50px;
     background-position: center;
     background-size: cover;
     position: absolute;
-    left: 250%;
-    top: 0;
+    right: -2%;
+    top: -100%;
 }
 .buy-icons{
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 45px;
 }
 .icon{
     width: 20%;
     height: 100px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     transition: 0.5s;
 }
 .icon-amazon{
@@ -210,28 +219,28 @@ padding-top: 50px;
 }
 .kindle-promo {
     width: 100%;
-    height: 700px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    margin-top: 30px;
+    align-items: center;
     background: url(./images/promo-background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0 30px 0 60px;
+    padding: 45px 45px 0 45px;
+    position: relative;
 }
 .desc {
     width: 40%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
     color: #fff;
+    margin-bottom: 45px;
+    margin-right: 20px;
 }
 .desc h1{
-    font-size: 60px;
+    font-size: 3rem;
     margin-bottom: 25px;
     position: relative;
 }
@@ -239,26 +248,26 @@ padding-top: 50px;
 .desc p{
     font-family: 'Lato', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 20px;
 }
 .image{
     width: 55%;
-    position: relative;
+    align-self: flex-end;
 }
-.image::before{
+.kindle-promo::before{
     content: '';
     display: block;
-    width: 158px;
-    height: 195px;
+    width: 17%;
+height: 28%;
     background-image: url(./images/kendle-version.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     position: absolute;
     bottom: 0;
-    right: -36px;
+    right: 0;
 }
 .rewievs {
     width: 100%;
@@ -307,43 +316,34 @@ padding-top: 50px;
 }
 .audio-version {
     width: 100%;
-    padding: 100px 40px 50px 100px;
+    padding: 40px 40px 50px 40px;
     display: flex;
     justify-content: space-between;
 }
 .audio-version img {
-    width: 540px;
-    height: 570px;
+    width: 45%;
 }
 .description{
-    margin-top: 30px;
     width: 45%;
     display: flex;
     align-items: start;
+    justify-content: center;
     flex-direction: column;
     gap: 30px;
+    position: relative;
 }
 .description h1{
     color: #282828;
-    font-size: 60px;
+    font-size: 3rem;
     line-height: 62px;
     font-weight: 400;
     letter-spacing: 1px;
 }
 .description p{
     font-size: 16px;
+    line-height: 1.5;
     font-family: 'Lato', sans-serif;
     color: #565656;
-}
-.audio-preview::after {
-    content: '';
-    display: block;
-    background-image: url(./images/free-preview.png);
-    width: 189px;
-    height: 138px;
-    position: absolute;
-    top: 70px;
-    left: 150px;
 }
 .parallax{
     width: 100%;
@@ -462,7 +462,7 @@ padding-top: 50px;
     text-align: left;
 }
 .author-desc h1{
-    font-size: 60px;
+    font-size: 3rem;
     line-height: 62px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -479,8 +479,11 @@ padding-top: 50px;
 .icons{
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    gap: 50px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.icons img{
+    width: 25%;
 }
 footer{
     height: 200px;
@@ -536,7 +539,9 @@ footer{
     animation: animation-2 3s linear infinite;
 }
 
-
+.order img{
+    width: 50%;
+}
 @keyframes animation-1 {
     0%{
         transform: translate(0);
@@ -559,3 +564,80 @@ footer{
         transform: translate(0);
     }
 }
+@media (max-width: 768px) {
+    .heading p{
+        display: none;
+    }
+    .paragraphs{
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    .paragraphs p{
+        width: 100%;
+    }
+    .buy-icons{
+        margin-top: 0;
+    }
+    .buy-icons::after{
+        display: none;
+    }
+    .kindle-promo{
+        display: flex;
+        flex-direction: column;
+    }
+    .desc{
+        width: 100%;
+    }
+    .image{
+        width: 100%;
+    }
+    .rewievs{
+        flex-direction: column;
+        row-gap: 35px;
+    }
+    .card{
+        width: 90%;
+    }
+    .audio-version, .header-row{
+        flex-direction: column;
+    }
+    .audio-version img{
+        width: 90%;
+    }
+    .description{
+        width: 100%;
+    }
+    .parallax{
+        padding-top: 35px;
+        padding-bottom: 35px;
+        height: auto;
+       background-attachment: unset;
+    }
+    .parallax-desc{
+        width: 100%;
+    }
+    .order, .order-row, .about-author, .buy-icons{
+        flex-direction: column;
+    }
+    .order-desc, .order-form, .order img, .name, .last-name, .author, .author-desc, .heading, .header-img{
+        width: 100%;
+    }
+    .order img{
+        margin-top: 35px;
+    }
+   .animation-1, .animation-2{
+    display: none;
+    visibility: hidden;
+   }
+   .social{
+    display: none;
+   }
+   .menu{
+    width: 100%;
+    column-gap: 10px;
+   }
+   .icon{
+    width: 60%;
+   }
+  }
